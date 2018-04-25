@@ -1,0 +1,12 @@
+Thumbs.db
+.DS_Store
+*~
+*.log
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+.tags
+vendor
+.idea
+.history
