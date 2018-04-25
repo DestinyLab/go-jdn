@@ -10,6 +10,8 @@ var jdntests = []struct {
 	t   time.Time
 	jdn JDN
 }{
+	{time.Date(-4712, 1, 1, 0, 0, 0, 0, time.UTC), 0},
+	{startGregorian, startGregorianJDN},
 	{time.Date(1985, 11, 11, 0, 0, 0, 0, time.UTC), 2446381},
 	{time.Date(1999, 9, 21, 0, 0, 0, 0, time.UTC), 2451443},
 	{time.Date(2010, 12, 1, 0, 0, 0, 0, time.UTC), 2455532},
@@ -41,6 +43,13 @@ func TestToTime(t *testing.T) {
 				t.Errorf("got %q, want %q", got, tt.t)
 			}
 		})
+	}
+}
+
+func TestModInt(t *testing.T) {
+	got := modInt(-119, 13)
+	if got != 11 {
+		t.Errorf("got %q, want %q", got, 11)
 	}
 }
 
