@@ -27,10 +27,9 @@ func main() {
   fmt.Printf("%v", jdn.ToNumber(t1))
   // Output: 2458222
 
-  t2 := JDN(2458222)
-	loc, _ := time.LoadLocation()
-  fmt.Printf("%s", t2.ToTime(loc))
-  // Output: 2018-04-13 00:00:00 +0000 UTC
+  t2 := JDN(2448046).ToTime()
+  fmt.Printf("%v %v %v\n", t2.Year(), t2.Month(), t2.Day())
+  // Output: 1990 June 3
 }
 ```
 
